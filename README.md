@@ -17,10 +17,6 @@ It focuses on **clean, maintainable code**, **responsive design**, and **modern 
 - **Certifications Section**: Professional certifications and achievements.
 - **Projects Section**: Filterable GitHub projects by category (PHP, JavaScript, Database):
   - **Insurance Calculator** (PHP, HTML, CSS)
-  - **Calculator** (HTML, CSS, JavaScript)
-  - **To-Do List** (HTML, CSS, JavaScript)
-  - **Tic Tac Toe** (HTML, CSS, JavaScript)
-  - **Database Project – FamLink** (PHP, SQL, MySQL)
 - **Contact Section**: Contact form with validation and EmailJS integration.
 - **Footer**: About, quick links, and social media connections (GitHub, LinkedIn, Email).
 
