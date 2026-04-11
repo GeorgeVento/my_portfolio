@@ -1,104 +1,208 @@
 /*
 ============================================================
-ABOUT.CSS - MODERNIZED
-------------------------------------------------------------
-Clean about section with modern card design
+ABOUT.CSS - DARK MODE
 ============================================================
 */
 
+.about-section {
+    background: var(--bg-primary);
+}
+
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 5rem;
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
 }
 
+/* Image */
 .about-image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.about-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.about-image-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    z-index: 0;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.about-image-wrapper:hover::before { opacity: 1; }
+
 .about-image img {
+    position: relative;
+    z-index: 1;
     width: 100%;
-    max-width: 350px;
-    height: auto;
+    max-width: 320px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 16px;
-    box-shadow: var(--shadow-xl);
+    border-radius: 18px;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.about-image img:hover {
+.about-image-wrapper:hover img {
     transform: scale(1.02);
 }
 
+/* Text */
 .about-text p {
-    font-size: 1.0625rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.85;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.4rem;
 }
 
-.about-text p:last-of-type {
-    margin-bottom: 2rem;
-}
+.about-text p:last-of-type { margin-bottom: 0; }
 
 .about-text b {
     color: var(--text-primary);
     font-weight: 600;
 }
 
+/* Info pills */
+.about-info-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    margin-bottom: 1.75rem;
+    margin-top: 1rem;
+}
+
+.info-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.875rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-light);
+    border-radius: 50px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.info-pill i {
+    font-size: 0.75rem;
+    color: var(--primary);
+}
+
+/* CV Download */
 .cv-download {
     margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .download-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1.75rem;
+    gap: 0.625rem;
+    padding: 0.85rem 1.75rem;
     background: var(--primary);
-    color: white;
+    color: #080d1a;
     font-size: 0.9375rem;
-    font-weight: 600;
-    border-radius: 8px;
-    box-shadow: var(--shadow-md);
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: var(--glow-green);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.2px;
 }
 
 .download-btn:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-    color: white;
+    background: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px rgba(74, 222, 128, 0.4);
+    color: #080d1a;
 }
 
-.download-btn:active {
-    transform: translateY(0);
+/* Social quick links */
+.about-socials {
+    display: flex;
+    gap: 0.75rem;
 }
 
+.about-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-medium);
+    border-radius: 10px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.about-social-link:hover {
+    background: rgba(74, 222, 128, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* ── Responsive ─── */
 @media (max-width: 968px) {
     .about-content {
         grid-template-columns: 1fr;
         gap: 2.5rem;
         text-align: center;
     }
-    
-    .about-image img {
-        max-width: 280px;
+
+    .about-image img { max-width: 240px; }
+
+    .about-info-pills {
+        justify-content: center;
     }
-    
-    .about-text p {
-        font-size: 1rem;
+
+    .cv-download {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about-socials {
+        justify-content: center;
     }
 }
 
 @media (max-width: 640px) {
-    .about-image img {
-        max-width: 240px;
+    .about-image img { max-width: 200px; }
+
+    .about-text p {
+        font-size: 0.9375rem;
+        line-height: 1.75;
+        text-align: left;
+    }
+
+    /* Keep info pills and buttons centered */
+    .about-info-pills { text-align: left; }
+
+    .download-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .about-social-link {
+        width: 46px;
+        height: 46px;
     }
 }

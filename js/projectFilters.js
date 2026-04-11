@@ -1,5 +1,5 @@
 export function initProjectFilters() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    const filterBtns   = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
     filterBtns.forEach(btn => {
@@ -9,12 +9,21 @@ export function initProjectFilters() {
 
             const filter = btn.getAttribute('data-filter');
 
-            projectCards.forEach(card => {
+            projectCards.forEach((card, i) => {
                 const categories = card.getAttribute('data-category').split(' ');
-                if (filter === 'all' || categories.includes(filter)) {
+                const matches = filter === 'all' || categories.includes(filter);
+
+                if (matches) {
                     card.classList.remove('hidden');
-                    card.style.animation = 'fadeInScale 0.5s ease-out';
+                    // Reset then re-trigger smooth entrance with stagger
+                    card.classList.remove('in-view');
+                    card.style.transitionDelay = '';
+                    // Force reflow so transition replays
+                    void card.offsetHeight;
+                    card.style.transitionDelay = (i * 80) + 'ms';
+                    requestAnimationFrame(() => card.classList.add('in-view'));
                 } else {
+                    card.style.transitionDelay = '';
                     card.classList.add('hidden');
                 }
             });

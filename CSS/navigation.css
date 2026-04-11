@@ -11,22 +11,22 @@ Scroll to top button and utility styles
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
     background: var(--primary);
-    color: white;
+    color: #080d1a;
     border: none;
     border-radius: 50%;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
+    transform: translateY(10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--glow-green);
     z-index: 900;
 }
 
@@ -37,9 +37,9 @@ Scroll to top button and utility styles
 }
 
 .scroll-to-top:hover {
-    background: var(--primary-dark);
+    background: var(--primary-light);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 0 40px rgba(74, 222, 128, 0.4);
 }
 
 .scroll-to-top:active {

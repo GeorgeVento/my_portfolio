@@ -1,42 +1,45 @@
 /*
 ============================================================
-CONTACT.CSS - MODERNIZED
-------------------------------------------------------------
-Clean contact form with modern styling
+CONTACT.CSS - DARK MODE
 ============================================================
 */
 
 .contact-section {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .contact-header {
-    text-align: left;
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .contact-header p {
-    font-size: 1.125rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
-    max-width: 600px;
+    max-width: 520px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .contact-wrapper {
-    max-width: 600px;
+    max-width: 580px;
     margin: 0 auto;
-    background: white;
+    background: var(--bg-card);
     padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: var(--shadow-lg);
+    border-radius: 20px;
     border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-lg);
+    transition: border-color 0.3s ease;
+}
+
+.contact-wrapper:hover {
+    border-color: var(--border-medium);
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.375rem;
 }
 
 .form-group {
@@ -46,21 +49,23 @@ Clean contact form with modern styling
 }
 
 .form-group label {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: var(--text-primary);
+    letter-spacing: 0.1px;
 }
 
 .form-group input,
 .form-group textarea {
-    padding: 0.875rem 1rem;
-    font-size: 1rem;
+    padding: 0.875rem 1.125rem;
+    font-size: 0.9375rem;
     font-family: inherit;
     color: var(--text-primary);
-    background: var(--bg-primary);
-    border: 2px solid var(--border-medium);
-    border-radius: 8px;
+    background: var(--bg-secondary);
+    border: 1.5px solid var(--border-light);
+    border-radius: 10px;
     transition: all 0.3s ease;
+    -webkit-appearance: none;
 }
 
 .form-group input::placeholder,
@@ -72,86 +77,97 @@ Clean contact form with modern styling
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.12);
+    background: rgba(74, 222, 128, 0.03);
 }
 
 .form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 130px;
 }
 
-/* Form validation states */
+/* Validation states */
 .form-group input.valid,
 .form-group textarea.valid {
-    border-color: var(--accent);
+    border-color: var(--primary);
 }
 
 .form-group input.error,
 .form-group textarea.error {
-    border-color: #ef4444;
+    border-color: #f87171;
 }
 
+/* Submit button */
 .submit-button {
     padding: 1rem 2rem;
     background: var(--primary);
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 8px;
-    box-shadow: var(--shadow-md);
+    color: #080d1a;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: var(--glow-green);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
+    letter-spacing: 0.2px;
 }
 
 .submit-button:hover:not(:disabled) {
-    background: var(--primary-dark);
+    background: var(--primary-light);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 0 40px rgba(74, 222, 128, 0.4);
 }
 
-.submit-button:active {
-    transform: translateY(0);
-}
+.submit-button:active { transform: translateY(0); }
 
 .submit-button:disabled {
-    opacity: 0.6;
+    opacity: 0.5;
     cursor: not-allowed;
 }
 
+/* Messages */
+.btn-loader { display: none; }
+.btn-loader.loading { display: inline; }
+.btn-text.loading  { display: none; }
+
 .form-message {
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 0.875rem 1rem;
+    border-radius: 10px;
     text-align: center;
     font-weight: 600;
-    margin-top: 1rem;
+    font-size: 0.9rem;
 }
 
 .form-message.success {
-    background: #d1fae5;
-    color: #065f46;
+    background: rgba(74, 222, 128, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(74, 222, 128, 0.25);
 }
 
 .form-message.error {
-    background: #fee2e2;
-    color: #991b1b;
+    background: rgba(248, 113, 113, 0.1);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.25);
 }
 
-.form-message.hidden {
-    display: none;
-}
+.form-message.hidden { display: none; }
 
+/* ── Responsive ─── */
 @media (max-width: 768px) {
     .contact-wrapper {
-        padding: 2rem 1.5rem;
+        padding: 1.625rem 1.125rem;
+        border-radius: 16px;
     }
-    
+
+    /* font-size 16px prevents iOS auto-zoom on input focus */
     .form-group input,
     .form-group textarea {
-        font-size: 1rem;
+        font-size: 16px;
     }
-    
+
     .submit-button {
-        padding: 0.875rem 1.75rem;
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
     }
 }

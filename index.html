@@ -9,22 +9,21 @@
     <meta property="og:title" content="George-Leonidas Ventouratos - Developer Portfolio">
     <meta property="og:description" content="Explore my web development projects, skills, and experience in computer science.">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#2563eb">
+    <meta name="theme-color" content="#4ade80">
     <title>George-Leonidas Ventouratos | Full Stack Developer Portfolio</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/hero.css">
     <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="CSS/skills.css">
-    <link rel="stylesheet" href="CSS/certifications.css">
     <link rel="stylesheet" href="CSS/projects.css">
     <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/navigation.css">
-    
+
     <!-- External Resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,10 +32,10 @@
 </head>
 <body>
 
-    <!-- Skip Link for Accessibility -->
+    <!-- Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Scroll to Top Button -->
+    <!-- Scroll to Top -->
     <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -45,21 +44,22 @@
     <header id="header">
         <div class="container">
             <div class="logo">
-                <a href="#hero">George-Leonidas Ventouratos</a>
+                <a href="#hero">George<span>.</span></a>
             </div>
-            
+
             <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            
+
             <nav id="nav-menu">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="CV_ENG.pdf" download="Ventouratos-Georgios.Leonidas-CV.pdf" class="nav-cv">Download CV</a></li>
                 </ul>
             </nav>
         </div>
@@ -67,42 +67,81 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        
+
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
+            <div class="hero-grid"></div>
             <div class="container">
-                <h1>Hi, I'm George 👋</h1>
-                <p class="tagline">A Computer Science Enthusiast, dedicated to turning theoretical knowledge into practical, efficient applications.</p>
-                <a href="#projects" class="cta-button">
-                    View My Projects
-                    <i class="fas fa-arrow-down"></i>
-                </a>
+                <h1>Hi, I'm George&nbsp;👋</h1>
+
+                <p class="hero-typing-line">
+                    I'm a <span class="typing-word" id="typing-target"></span><span class="typing-cursor"></span>
+                </p>
+
+                <p class="tagline">
+                    A Computer Science student passionate about building full-stack web applications that solve real-world problems with clean, efficient code.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#projects" class="cta-button">
+                        <i class="fas fa-folder-open"></i>
+                        View My Projects
+                    </a>
+                    <a href="#contact" class="cta-button-outline">
+                        <i class="fas fa-paper-plane"></i>
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-mouse"></div>
+                <span>Scroll</span>
             </div>
         </section>
-        
+
         <!-- About Section -->
-        <section id="about" class="section">
+        <section id="about" class="section about-section">
             <div class="container">
-                <h2>About Me</h2>
-                
+                <h2 class="reveal">About Me</h2>
+
                 <div class="about-content">
-                    <div class="about-image">
-                        <img src="img/profile.jpeg" alt="George-Leonidas Ventouratos - Profile Picture">
+                    <div class="about-image reveal">
+                        <div class="about-image-wrapper">
+                            <img src="img/profile.jpeg" alt="George-Leonidas Ventouratos - Profile Picture">
+                        </div>
                     </div>
-                    
-                    <div class="about-text">
+
+                    <div class="about-text reveal reveal-delay-1">
                         <p>
-                            A <b>dedicated Computer Science Student</b> at the SAEK Aigaleo, currently in my 2nd year, specializing in <b>Web Development</b> and <b>Database Management</b>. I'm passionate about building full-stack applications that solve real problems with clean, maintainable code.
+                            A <b>dedicated Computer Science Student</b> at SAEK Aigaleo, currently in my 2nd year, specializing in <b>Web Development</b> and <b>Database Management</b>. I'm passionate about building full-stack applications that solve real problems with clean, maintainable code.
                         </p>
                         <p>
-                            My focus is on combining frontend design with solid backend architecture, from responsive user interfaces to efficient database systems. I'm committed to <b>continuous learning</b>, staying updated with modern frameworks and best practices. Let's connect to discuss opportunities or collaborate on exciting projects!
+                            My focus is on combining frontend design with solid backend architecture — from responsive user interfaces to efficient database systems. I'm committed to <b>continuous learning</b>, staying updated with modern frameworks and best practices.
                         </p>
-                        
+
+                        <div class="about-info-pills">
+                            <span class="info-pill"><i class="fas fa-map-marker-alt"></i> Athens, Greece</span>
+                            <span class="info-pill"><i class="fas fa-graduation-cap"></i> SAEK Aigaleo &mdash; 2nd Year</span>
+                            <span class="info-pill"><i class="fas fa-code"></i> Full Stack Developer</span>
+                        </div>
+
                         <div class="cv-download">
                             <a href="CV_ENG.pdf" download="Ventouratos-Georgios.Leonidas-CV.pdf" class="download-btn">
                                 <i class="fas fa-download"></i>
-                                Download My CV
+                                Download CV
                             </a>
+                            <div class="about-socials">
+                                <a href="https://github.com/GeorgeVento" target="_blank" class="about-social-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/george-leonidas-ventouratos-660709217/" target="_blank" class="about-social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="mailto:ventouratos.george@gmail.com" class="about-social-link" aria-label="Email">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,54 +151,37 @@
         <!-- Skills Section -->
         <section id="skills" class="section skills-section">
             <div class="container">
-                <h2>Programming Languages & Tools</h2>
-                <p class="skills-subtitle">Core technologies I use to build web applications and solve complex problems.</p>
-                
+                <h2 class="reveal">Tech Stack</h2>
+                <p class="skills-subtitle reveal">Core technologies I use to build web applications and solve complex problems.</p>
+
                 <div class="skills-grid">
-                    <div class="skill-item">
+                    <div class="skill-item reveal reveal-delay-1">
                         <i class="fab fa-html5"></i>
                         <span>HTML5</span>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal reveal-delay-2">
                         <i class="fab fa-css3-alt"></i>
                         <span>CSS3</span>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal reveal-delay-3">
                         <i class="fab fa-js-square"></i>
                         <span>JavaScript</span>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal reveal-delay-1">
                         <i class="fab fa-python"></i>
                         <span>Python</span>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal reveal-delay-2">
                         <i class="fas fa-database"></i>
                         <span>SQL</span>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal reveal-delay-3">
                         <i class="fab fa-php"></i>
                         <span>PHP</span>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal reveal-delay-4">
                         <i class="fas fa-code"></i>
-                        <span>C & C++</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications" class="section certifications-section">
-            <div class="container">
-                <h2>Certifications & Achievements</h2>
-                <div class="certifications-grid">
-                    <div class="cert-item">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3>GlobalCert</h3>
-                        <p class="cert-issuer">Professional Certification</p>
-                        <p>Certified in professional development and technology best practices, demonstrating commitment to continuous learning and industry standards.</p>
+                        <span>C &amp; C++</span>
                     </div>
                 </div>
             </div>
@@ -168,91 +190,87 @@
         <!-- Projects Section -->
         <section id="projects" class="section projects-section">
             <div class="container">
-                <h2>My GitHub Projects</h2>
-                
+                <h2 class="reveal">My Projects</h2>
+
                 <!-- Filter Buttons -->
-                <div class="filter-container">
+                <div class="filter-container reveal">
                     <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="php">PHP</button>
-                    <button class="filter-btn" data-filter="javascript">JavaScript</button>
-                    <button class="filter-btn" data-filter="database">Database</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="app">Apps</button>
                 </div>
-                
+
                 <div class="project-grid">
-                    <!-- Insurance Calculator -->
-                    <div class="project-card" data-category="php">
-                        <h3>Insurance Calculator</h3>
+
+                    <!-- EcoCity Tracker — Featured / Founder -->
+                    <div class="project-card featured" data-category="app">
+                        <div class="card-header">
+                            <span class="card-icon">🌿</span>
+                            <div class="card-badges">
+                                <span class="badge badge-founder"><i class="fas fa-crown"></i> Founder &amp; Lead Dev</span>
+                                <span class="badge badge-featured">Featured</span>
+                            </div>
+                        </div>
+                        <h3>EcoCity Tracker &mdash; Environmental Reporting Platform</h3>
+                        <div class="tech-tags-container">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                        <p>As <strong>founder and project leader</strong>, I developed a civic technology platform that enables citizens to report environmental issues across municipalities in Attica. Features include GPS-based reporting with photo uploads, per-municipality admin dashboards, statistics visualised with Chart.js, and Excel export functionality.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/GeorgeVento/EcoCity-Tracker" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Charity Website -->
+                    <div class="project-card" data-category="web">
+                        <div class="card-header">
+                            <span class="card-icon">🐾</span>
+                        </div>
+                        <h3>Four Paws Friends &mdash; Charity Website</h3>
+                        <div class="tech-tags-container">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                        <p>A comprehensive website for a fictional animal rescue organisation, featuring adoption listings, event management, donation forms, and an admin dashboard for managing animals and reports.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/GeorgeVento/charity-website" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Room Reservation App -->
+                    <div class="project-card" data-category="app">
+                        <div class="card-header">
+                            <span class="card-icon">🏨</span>
+                        </div>
+                        <h3>Hotel Room Reservation System</h3>
                         <div class="tech-tags-container">
                             <span class="tech-tag">PHP</span>
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
-                        </div>
-                        <p>A simple web application written in PHP designed to calculate insurance costs and apply discount codes. All logic, form handling, and presentation are contained within a single file.</p>
-                        <a href="https://github.com/GeorgeVento/insurance-calculator" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Repository
-                        </a>
-                    </div>
-
-                    <!-- Calculator -->
-                    <div class="project-card" data-category="javascript">
-                        <h3>Calculator</h3>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <p>A lightweight web-based calculator built with pure HTML, CSS, and JavaScript. Offers basic arithmetic functionality in a single-page layout.</p>
-                        <a href="https://github.com/GeorgeVento/Calculator" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Repository
-                        </a>
-                    </div>
-
-                    <!-- To-Do List -->
-                    <div class="project-card" data-category="javascript">
-                        <h3>To-Do List</h3>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <p>A functional to-do list application built with vanilla JavaScript. Features task management, persistent storage, and a clean user interface.</p>
-                        <a href="https://github.com/GeorgeVento/ToDoList" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Repository
-                        </a>
-                    </div>
-
-                    <!-- Tic Tac Toe -->
-                    <div class="project-card" data-category="javascript">
-                        <h3>Tic Tac Toe</h3>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <p>Interactive tic-tac-toe game with win detection and responsive design. Built using JavaScript logic and DOM manipulation.</p>
-                        <a href="https://github.com/GeorgeVento/TicTacToe" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Repository
-                        </a>
-                    </div>
-
-                    <!-- Database Project -->
-                    <div class="project-card" data-category="database php">
-                        <h3>Database Project - FamLink</h3>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">PHP</span>
                             <span class="tech-tag">MySQL</span>
                         </div>
-                        <p>Comprehensive database project implementing a family tree management system with full CRUD operations and relational database design.</p>
-                        <a href="https://github.com/GeorgeVento/FamLink" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Repository
-                        </a>
+                        <p>A multi-step web application for hotel room bookings, including customer details, room selection, booking summary, and an admin panel for viewing all reservations stored in a MySQL database.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/GeorgeVento/Room-Reservation-App" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -260,33 +278,33 @@
         <!-- Contact Section -->
         <section id="contact" class="section contact-section">
             <div class="container">
-                <div class="contact-header">
+                <div class="contact-header reveal">
                     <h2>Get In Touch</h2>
-                    <p>Have a project in mind or just want to connect? Feel free to reach out!</p>
+                    <p>Looking for a motivated developer? Have a project in mind or just want to connect? I'd love to hear from you!</p>
                 </div>
-                
-                <div class="contact-wrapper">
+
+                <div class="contact-wrapper reveal reveal-delay-1">
                     <form id="contact-form" class="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" placeholder="Your message..." required></textarea>
                         </div>
-                        
+
                         <button type="submit" id="submit-btn" class="submit-button">
                             <span class="btn-text">Send Message</span>
                             <span class="btn-loader hidden">Sending...</span>
                         </button>
-                        
+
                         <div id="form-message" class="form-message hidden"></div>
                     </form>
                 </div>
@@ -303,7 +321,7 @@
                     <h4>George-Leonidas Ventouratos</h4>
                     <p>Computer Science student passionate about building efficient web applications and solving complex problems.</p>
                 </div>
-                
+
                 <div class="footer-section footer-links">
                     <h4>Quick Links</h4>
                     <ul>
@@ -313,7 +331,7 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section footer-socials">
                     <h4>Connect</h4>
                     <ul class="socials">
@@ -323,7 +341,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="container">
                     <p class="legal">&copy; 2026 George-Leonidas Ventouratos. All rights reserved.</p>
@@ -333,15 +351,81 @@
         </div>
     </footer>
 
+    <!-- ═══ Scripts ═══ -->
+
+    <!-- Typing Animation -->
+    <script>
+        (function () {
+            const words = ['Web Developer', 'Full Stack Developer', 'CS Student', 'Problem Solver'];
+            const el = document.getElementById('typing-target');
+            let wi = 0, ci = 0, deleting = false;
+
+            function tick() {
+                const word = words[wi];
+                el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+
+                let delay = deleting ? 60 : 100;
+
+                if (!deleting && ci > word.length) {
+                    deleting = true;
+                    delay = 1600;
+                } else if (deleting && ci < 0) {
+                    deleting = false;
+                    ci = 0;
+                    wi = (wi + 1) % words.length;
+                    delay = 400;
+                }
+                setTimeout(tick, delay);
+            }
+
+            tick();
+        })();
+    </script>
+
+    <!-- Scroll Reveal -->
+    <script>
+        (function () {
+            // Generic reveal (.reveal → .visible)
+            const revealObs = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add('visible');
+                            revealObs.unobserve(e.target);
+                        }
+                    });
+                },
+                { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+            );
+            document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+            // Project cards (.project-card → .in-view) with stagger
+            const cardObs = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((e, i) => {
+                        if (e.isIntersecting) {
+                            setTimeout(() => {
+                                e.target.classList.add('in-view');
+                            }, i * 100);
+                            cardObs.unobserve(e.target);
+                        }
+                    });
+                },
+                { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+            );
+            document.querySelectorAll('.project-card').forEach(el => cardObs.observe(el));
+        })();
+    </script>
+
     <!-- Module Scripts -->
     <script type="module">
-        import { initHeaderScroll } from './js/headerScroll.js';
-        import { initScrollToTop } from './js/scrollToTop.js';
-        import { initMobileMenu } from './js/mobileMenu.js';
+        import { initHeaderScroll }   from './js/headerScroll.js';
+        import { initScrollToTop }    from './js/scrollToTop.js';
+        import { initMobileMenu }     from './js/mobileMenu.js';
         import { initProjectFilters } from './js/projectFilters.js';
-        import { initSmoothScroll } from './js/smoothScroll.js';
+        import { initSmoothScroll }   from './js/smoothScroll.js';
         import { initFormValidation } from './js/formValidation.js';
-        import { initEmailJS } from './js/emailJS.js';
+        import { initEmailJS }        from './js/emailJS.js';
 
         document.addEventListener('DOMContentLoaded', () => {
             initHeaderScroll();
