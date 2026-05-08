@@ -46,8 +46,14 @@ PROJECTS.CSS - DARK CARDS WITH GLOW
 /* Project Grid */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.75rem;
+}
+
+@media (max-width: 900px) and (min-width: 769px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Featured card spans full width */
@@ -167,6 +173,12 @@ PROJECTS.CSS - DARK CARDS WITH GLOW
     border: 1px solid rgba(74, 222, 128, 0.25);
 }
 
+.badge-soon {
+    background: rgba(251, 191, 36, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.25);
+}
+
 /* ── Card heading ── */
 .project-card h3 {
     font-size: 1.2rem;
@@ -241,6 +253,52 @@ PROJECTS.CSS - DARK CARDS WITH GLOW
 }
 
 .project-link i { font-size: 1rem; }
+
+/* Live Demo — primary filled */
+.project-link-demo {
+    background: var(--primary);
+    color: #080d1a;
+    border-color: var(--primary);
+    font-weight: 700;
+}
+
+.project-link-demo:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-light);
+    color: #080d1a;
+    box-shadow: 0 0 24px rgba(74,222,128,0.4);
+}
+
+/* Coming Soon — non-interactive placeholder */
+.project-link-soon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.65rem 1.375rem;
+    background: rgba(255,255,255,0.03);
+    color: var(--text-tertiary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px dashed var(--border-light);
+    cursor: default;
+    user-select: none;
+}
+
+/* GitHub — subtle secondary */
+.project-link-github {
+    background: rgba(255,255,255,0.04);
+    color: var(--text-secondary);
+    border-color: var(--border-medium);
+}
+
+.project-link-github:hover {
+    background: rgba(255,255,255,0.1);
+    color: var(--text-primary);
+    border-color: var(--border-medium);
+    box-shadow: none;
+    transform: translateY(-2px);
+}
 
 /* ── Hidden (filter) ── */
 .project-card.hidden {

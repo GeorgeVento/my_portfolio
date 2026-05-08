@@ -82,6 +82,7 @@ SKILLS.CSS - DARK MODE
 .skill-item:nth-child(5):hover i { color: #00758f; }  /* SQL */
 .skill-item:nth-child(6):hover i { color: #8993be; }  /* PHP */
 .skill-item:nth-child(7):hover i { color: #a8b9cc; }  /* C/C++ */
+.skill-item:nth-child(8):hover i { color: #f05032; }  /* Git */
 
 .skill-item span {
     font-size: 0.875rem;
