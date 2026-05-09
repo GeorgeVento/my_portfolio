@@ -199,91 +199,7 @@
             <div class="container">
                 <h2 class="reveal">My Projects</h2>
 
-                <div class="project-grid">
-
-                    <!-- EcoCity Tracker — Featured / Founder -->
-                    <div class="project-card featured" data-category="app">
-                        <div class="card-header">
-                            <span class="card-icon">🌿</span>
-                            <div class="card-badges">
-                                <span class="badge badge-founder"><i class="fas fa-crown"></i> Founder &amp; Lead Dev</span>
-                                <span class="badge badge-featured">Featured</span>
-                            </div>
-                        </div>
-                        <h3>EcoCity Tracker &mdash; Environmental Reporting Platform</h3>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">Git</span>
-                        </div>
-                        <p>I <strong>founded this project and led the development</strong> alongside two teammates. Residents can report environmental issues in their area, attach photos, and follow what gets fixed. Each municipality has its own admin dashboard with statistics via Chart.js and an option to export reports to Excel.</p>
-                        <div class="project-links">
-                            <a href="https://georgevento.github.io/EcoCity-Tracker/" target="_blank" class="project-link project-link-demo">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
-                            </a>
-                            <a href="https://github.com/GeorgeVento/EcoCity-Tracker" target="_blank" class="project-link project-link-github">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Charity Website -->
-                    <div class="project-card" data-category="web">
-                        <div class="card-header">
-                            <span class="card-icon">🐾</span>
-                        </div>
-                        <h3>Four Paws Friends &mdash; Charity Website</h3>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">Bootstrap</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Git</span>
-                        </div>
-                        <p>Website for a fictional animal shelter — adoption listings, event pages, and donation forms. Includes a PHP-powered admin panel to manage animals, users, and reports.</p>
-                        <div class="project-links">
-                            <a href="https://georgevento.github.io/charity-website/" target="_blank" class="project-link project-link-demo">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
-                            </a>
-                            <a href="https://github.com/GeorgeVento/charity-website" target="_blank" class="project-link project-link-github">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Room Reservation App -->
-                    <div class="project-card" data-category="app">
-                        <div class="card-header">
-                            <span class="card-icon">🏨</span>
-                        </div>
-                        <h3>Hotel Room Reservation System</h3>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Git</span>
-                        </div>
-                        <p>A step-by-step booking app — guests fill in their details, pick a room, and get a confirmation summary. The admin panel shows all reservations pulled from a MySQL database.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/GeorgeVento/Room-Reservation-App" target="_blank" class="project-link project-link-github">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
+                <div id="project-grid" class="project-grid"></div>
             </div>
         </section>
 
@@ -411,21 +327,6 @@
             );
             document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-            // Project cards (.project-card → .in-view) with stagger
-            const cardObs = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((e, i) => {
-                        if (e.isIntersecting) {
-                            setTimeout(() => {
-                                e.target.classList.add('in-view');
-                            }, i * 100);
-                            cardObs.unobserve(e.target);
-                        }
-                    });
-                },
-                { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
-            );
-            document.querySelectorAll('.project-card').forEach(el => cardObs.observe(el));
         })();
     </script>
 
@@ -438,15 +339,18 @@
         import { initSmoothScroll }   from './js/smoothScroll.js';
         import { initFormValidation } from './js/formValidation.js';
         import { initEmailJS }        from './js/emailJS.js';
+        import { loadProjects }       from './js/loadProjects.js';
 
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
             initHeaderScroll();
             initScrollToTop();
             initMobileMenu();
-            initProjectFilters();
             initSmoothScroll();
             initFormValidation();
             initEmailJS();
+
+            await loadProjects();
+            initProjectFilters();
         });
     </script>
 

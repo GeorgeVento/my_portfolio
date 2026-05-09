@@ -1,0 +1,59 @@
+[
+  {
+    "id": "ecocity",
+    "title": "EcoCity Tracker — Environmental Reporting Platform",
+    "icon": "🌿",
+    "featured": true,
+    "badges": ["founder", "featured"],
+    "tags": ["Node.js", "Express", "JavaScript", "HTML", "CSS", "JWT", "Chart.js", "Git"],
+    "description": "I <strong>founded this project and led the development</strong> alongside two teammates. Residents can report environmental issues in their area, attach photos, and follow what gets fixed. Each municipality has its own admin dashboard with statistics via Chart.js and an option to export reports to Excel.",
+    "category": "app",
+    "demo": "https://georgevento.github.io/EcoCity-Tracker/",
+    "github": "https://github.com/GeorgeVento/EcoCity-Tracker"
+  },
+  {
+    "id": "charity",
+    "title": "Four Paws Friends — Charity Website",
+    "icon": "🐾",
+    "featured": false,
+    "badges": [],
+    "tags": ["HTML", "CSS", "Bootstrap", "PHP", "MySQL", "Git"],
+    "description": "Website for a fictional animal shelter — adoption listings, event pages, and donation forms. Includes a PHP-powered admin panel to manage animals, users, and reports.",
+    "category": "web",
+    "demo": "https://georgevento.github.io/charity-website/",
+    "github": "https://github.com/GeorgeVento/charity-website"
+  },
+  {
+    "id": "hotel",
+    "title": "Hotel Room Reservation System",
+    "icon": "🏨",
+    "featured": false,
+    "badges": [],
+    "tags": ["PHP", "HTML", "CSS", "MySQL", "Git"],
+    "description": "A step-by-step booking app — guests fill in their details, pick a room, and get a confirmation summary. The admin panel shows all reservations pulled from a MySQL database.",
+    "category": "app",
+    "github": "https://github.com/GeorgeVento/Room-Reservation-App"
+  },
+  {
+    "id": "portfolio",
+    "title": "Personal Portfolio Website",
+    "icon": "💼",
+    "featured": false,
+    "badges": [],
+    "tags": ["HTML", "CSS", "JavaScript", "Git"],
+    "description": "The site you're looking at — built from scratch with vanilla JS and modular CSS. No frameworks, no CMS. Dark theme with scroll animations, a typing effect, and a responsive layout deployed on GitHub Pages.",
+    "category": "web",
+    "github": "https://github.com/GeorgeVento/my_portfolio"
+  },
+  {
+    "id": "coming-soon",
+    "title": "New Project — In Development",
+    "icon": "🚀",
+    "featured": false,
+    "badges": ["soon"],
+    "tags": ["Python", "SQL"],
+    "description": "A new project currently in development. Stack and details will be added once the first version is ready. Check back soon.",
+    "category": "app",
+    "comingSoon": true
+  }
+]
