@@ -33,16 +33,5 @@
     "description": "A step-by-step booking app — guests fill in their details, pick a room, and get a confirmation summary. The admin panel shows all reservations pulled from a MySQL database.",
     "category": "app",
     "github": "https://github.com/GeorgeVento/Room-Reservation-App"
-  },
-  {
-    "id": "portfolio",
-    "title": "Personal Portfolio Website",
-    "icon": "💼",
-    "featured": false,
-    "badges": [],
-    "tags": ["HTML", "CSS", "JavaScript", "Git"],
-    "description": "The site you're looking at — built from scratch with vanilla JS and modular CSS. No frameworks, no CMS. Dark theme with scroll animations, a typing effect, and a responsive layout deployed on GitHub Pages.",
-    "category": "web",
-    "github": "https://github.com/GeorgeVento/my_portfolio"
   }
 ]
