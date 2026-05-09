@@ -6,7 +6,7 @@
 Personal portfolio of **George-Leonidas Ventouratos**, a final-year Open Software Systems student at SAEK Aigaleo, looking for a junior developer role.  
 Built from scratch with vanilla HTML, CSS, and JavaScript — no frameworks, no CMS.
 
-Live at: [georgevento.github.io/my_portfolio](https://georgevento.github.io/my_portfolio)
+Live at: [georgevento.github.io/my_portfolio](https://glventouratos.gr)
 
 ---
 
