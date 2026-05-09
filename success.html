@@ -3,196 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Sent - Portfolio</title>
+    <title>Message Sent — George Ventouratos</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #007BFF 0%, #0056b3 50%, #003d82 100%);
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #080d1a;
+            color: #f1f5f9;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 24px;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .success-container {
-            background: white;
-            padding: 50px;
-            border-radius: 20px;
+        .card {
+            background: #101828;
+            border: 1px solid rgba(74, 222, 128, 0.2);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
             text-align: center;
-            max-width: 600px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.6s ease-out;
+            max-width: 520px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(74,222,128,0.08);
+            animation: slideUp 0.5s ease-out both;
         }
 
         @keyframes slideUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            from { transform: translateY(40px); opacity: 0; }
+            to   { transform: translateY(0);    opacity: 1; }
         }
 
-        .success-icon {
-            font-size: 5em;
-            color: #28a745;
-            margin-bottom: 20px;
-            animation: scaleIn 0.6s ease-out;
+        .icon-wrap {
+            width: 72px;
+            height: 72px;
+            background: rgba(74, 222, 128, 0.12);
+            border: 1.5px solid rgba(74, 222, 128, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            animation: scaleIn 0.5s 0.2s ease-out both;
         }
 
         @keyframes scaleIn {
-            from {
-                transform: scale(0);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
+            from { transform: scale(0); opacity: 0; }
+            to   { transform: scale(1); opacity: 1; }
+        }
+
+        .icon-wrap i {
+            font-size: 1.875rem;
+            color: #4ade80;
         }
 
         h1 {
-            color: #2c3e50;
-            font-size: 2.2em;
-            margin-bottom: 15px;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #f1f5f9;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
         }
 
-        p {
-            color: #666;
-            font-size: 1.1em;
-            line-height: 1.8;
-            margin-bottom: 30px;
+        .subtitle {
+            color: #94a3b8;
+            font-size: 0.9625rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
         }
 
-        .button-group {
+        .divider {
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #4ade80, #22d3ee);
+            border-radius: 2px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn-group {
             display: flex;
-            gap: 15px;
+            gap: 0.75rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 14px 30px;
-            border: none;
-            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.9rem;
             font-weight: 700;
-            font-size: 1em;
-            cursor: pointer;
-            transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
-            color: white;
-            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+            background: #4ade80;
+            color: #080d1a;
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+            background: #86efac;
+            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(74, 222, 128, 0.4);
         }
 
         .btn-secondary {
-            background: #f0f4f8;
-            color: #007BFF;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: transparent;
+            color: #94a3b8;
+            border: 1.5px solid rgba(255,255,255,0.13);
         }
 
         .btn-secondary:hover {
-            background: #e8ecf1;
+            color: #f1f5f9;
+            border-color: rgba(255,255,255,0.25);
             transform: translateY(-2px);
         }
 
-        .message {
-            background: #e8f5e9;
-            border-left: 4px solid #28a745;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            text-align: left;
-            color: #2e7d32;
-        }
-
-        @media (max-width: 600px) {
-            .success-container {
-                padding: 35px 20px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            .success-icon {
-                font-size: 4em;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
+        @media (max-width: 480px) {
+            .card { padding: 2rem 1.5rem; }
+            h1 { font-size: 1.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { justify-content: center; }
         }
     </style>
 </head>
 <body>
-    <div class="success-container">
-        <div class="success-icon">
-            <i class="fas fa-check-circle"></i>
+    <div class="card">
+        <div class="icon-wrap">
+            <i class="fas fa-check"></i>
         </div>
-        <h1>Message Sent Successfully! 🎉</h1>
-        <div class="message">
-            <p><strong>Thank you!</strong> Your message has been received. I'll review it and get back to you as soon as possible.</p>
-        </div>
-        <p>I appreciate you reaching out. Your inquiry is important to me.</p>
-        <div class="button-group">
-            <a href="index.html" class="btn btn-primary">Back to Portfolio</a>
-            <a href="index.html#contact" class="btn btn-secondary">Contact Again</a>
+        <h1>Message sent!</h1>
+        <div class="divider"></div>
+        <p class="subtitle">Thanks for reaching out. I'll get back to you as soon as possible.</p>
+        <div class="btn-group">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+            <a href="index.html#contact" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i>
+                Send Another
+            </a>
         </div>
     </div>
 
     <script>
-        // Trigger confetti on page load
-        function triggerConfetti() {
-            const duration = 4000;
-            const animationEnd = Date.now() + duration;
-
-            const interval = setInterval(() => {
-                if (Date.now() > animationEnd) {
-                    clearInterval(interval);
-                    return;
-                }
-
-                confetti({
-                    particleCount: 100,
-                    angle: Math.random() * 360,
-                    spread: 70,
-                    gravity: 0.8,
-                    origin: {
-                        x: Math.random(),
-                        y: Math.random() * 0.5
-                    }
-                });
-            }, 150);
-        }
-
-        // Start confetti when page loads
-        window.addEventListener('load', triggerConfetti);
+        window.addEventListener('load', () => {
+            const end = Date.now() + 3000;
+            (function fire() {
+                confetti({ particleCount: 40, angle: 60,  spread: 55, origin: { x: 0 }, colors: ['#4ade80', '#22d3ee', '#a78bfa'] });
+                confetti({ particleCount: 40, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#4ade80', '#22d3ee', '#a78bfa'] });
+                if (Date.now() < end) requestAnimationFrame(fire);
+            })();
+        });
     </script>
 </body>
 </html>

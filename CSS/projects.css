@@ -50,10 +50,6 @@ PROJECTS.CSS - DARK CARDS WITH GLOW
     gap: 1.75rem;
 }
 
-/* Featured card spans full width */
-.project-card.featured {
-    grid-column: 1 / -1;
-}
 
 /* ── Base Card ── */
 .project-card {
@@ -301,6 +297,46 @@ PROJECTS.CSS - DARK CARDS WITH GLOW
     display: none !important;
 }
 
+/* ── Skeleton loader ── */
+.project-skeleton {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 18px;
+    min-height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 50%, transparent 100%);
+    animation: skeleton-shimmer 1.4s infinite;
+}
+
+@keyframes skeleton-shimmer {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ── Error state ── */
+.projects-error {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 3rem;
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+}
+
+.projects-error i {
+    font-size: 2rem;
+    color: var(--text-tertiary);
+}
+
 /* ── Responsive ─── */
 @media (max-width: 768px) {
     .project-grid {
@@ -308,9 +344,7 @@ PROJECTS.CSS - DARK CARDS WITH GLOW
         gap: 1.125rem;
     }
 
-    .project-card.featured { grid-column: 1 / -1; }
-
-    .project-card {
+.project-card {
         padding: 1.375rem;
         border-radius: 14px;
         /* disable lift on touch — no hover on mobile */

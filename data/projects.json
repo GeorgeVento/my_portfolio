@@ -44,16 +44,5 @@
     "description": "The site you're looking at — built from scratch with vanilla JS and modular CSS. No frameworks, no CMS. Dark theme with scroll animations, a typing effect, and a responsive layout deployed on GitHub Pages.",
     "category": "web",
     "github": "https://github.com/GeorgeVento/my_portfolio"
-  },
-  {
-    "id": "coming-soon",
-    "title": "New Project — In Development",
-    "icon": "🚀",
-    "featured": false,
-    "badges": ["soon"],
-    "tags": ["Python", "SQL"],
-    "description": "A new project currently in development. Stack and details will be added once the first version is ready. Check back soon.",
-    "category": "app",
-    "comingSoon": true
   }
 ]

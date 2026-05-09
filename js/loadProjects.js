@@ -48,13 +48,31 @@ function observeCards() {
     document.querySelectorAll('.project-card').forEach(el => obs.observe(el));
 }
 
+function showSkeletons(grid, count) {
+    grid.innerHTML = Array(count).fill('<div class="project-skeleton"></div>').join('');
+}
+
+function showError(grid) {
+    grid.innerHTML = `
+        <div class="projects-error">
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Could not load projects. Please refresh the page.</p>
+        </div>`;
+}
+
 export async function loadProjects() {
     const grid = document.getElementById('project-grid');
     if (!grid) return;
 
-    const res = await fetch('./data/projects.json');
-    const projects = await res.json();
+    showSkeletons(grid, 4);
 
-    grid.innerHTML = projects.map(buildCard).join('');
-    observeCards();
+    try {
+        const res = await fetch('./data/projects.json');
+        if (!res.ok) throw new Error('fetch failed');
+        const projects = await res.json();
+        grid.innerHTML = projects.map(buildCard).join('');
+        observeCards();
+    } catch {
+        showError(grid);
+    }
 }

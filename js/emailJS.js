@@ -3,7 +3,7 @@ export function initEmailJS() {
     const USER_ID = '1SQJnbQyaGHq7IlAa';
     const TEMPLATE_NOTIFICATION = 'template_1aelipb';
     const TEMPLATE_AUTOREPLY = 'template_fc2hzu5';
-    const REDIRECT_URL = 'https://georgevento.github.io/portfolio/success.html';
+    const REDIRECT_URL = './success.html';
 
     emailjs.init(USER_ID);
 

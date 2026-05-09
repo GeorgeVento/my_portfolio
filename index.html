@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="CSS/navigation.css">
 
     <!-- External Resources -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,6 +199,12 @@
         <section id="projects" class="section projects-section">
             <div class="container">
                 <h2 class="reveal">My Projects</h2>
+
+                <div class="filter-container reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="app">App</button>
+                </div>
 
                 <div id="project-grid" class="project-grid"></div>
             </div>
