@@ -1,62 +1,84 @@
-# George-Leonidas Ventouratos | Full Stack Developer Portfolio
+# George-Leonidas Ventouratos | Junior Developer Portfolio
 
 ---
 
-## 🌟 Overview
-This is the personal portfolio of **George-Leonidas Ventouratos**, a Computer Science student and Full Stack Web Developer.  
-The website highlights his **skills, projects, certifications**, and offers a way to **get in touch**.  
-It focuses on **clean, maintainable code**, **responsive design**, and **modern web development practices**.
+## Overview
+Personal portfolio of **George-Leonidas Ventouratos**, a final-year Open Software Systems student at SAEK Aigaleo, looking for a junior developer role.  
+Built from scratch with vanilla HTML, CSS, and JavaScript — no frameworks, no CMS.
+
+Live at: [georgevento.github.io/my_portfolio](https://georgevento.github.io/my_portfolio)
 
 ---
 
-## 🛠 Features
-- **Hero Section**: Introduction with name, tagline, and CTA button linking to projects.
-- **About Section**: Profile picture, short bio, CV download, and education/specialization in Web Development & Database Management.
-- **Skills Section**: Core technologies showcased:
-  - HTML5, CSS3, JavaScript, Python, SQL, PHP, C & C++
-- **Certifications Section**: Professional certifications and achievements.
-- **Projects Section**: Filterable GitHub projects by category (PHP, JavaScript, Database):
-  - **Insurance Calculator** (PHP, HTML, CSS)
-- **Contact Section**: Contact form with validation and EmailJS integration.
-- **Footer**: About, quick links, and social media connections (GitHub, LinkedIn, Email).
+## Features
+- **Hero Section** — Typing animation, available-for-hire badge, CV download
+- **About Section** — Bio, info pills, socials, CV download
+- **Tech Stack Section** — 8 skills with brand colors on hover
+- **Projects Section** — Data-driven cards loaded from `data/projects.json`, filter buttons (All / Web / App), skeleton loader while fetching
+- **Contact Section** — Form with real-time validation and EmailJS integration (notification + auto-reply)
+- **Footer** — Quick links, social media
 
 ---
 
-## 💻 Technologies
-- **Front-End**: HTML5, CSS3, JavaScript (ES Modules)
-- **Back-End**: PHP, SQL, MySQL
-- **Libraries & Tools**:
-  - Font Awesome (Icons)
-  - Google Fonts (Inter)
-  - EmailJS (Contact form)
-- **Responsive Design**: Fully mobile-friendly and accessible
+## Technologies
+- **Front-End**: HTML5, CSS3, JavaScript (ES Modules, top-level await)
+- **Libraries**: Font Awesome, Google Fonts (Inter), EmailJS
+- **Responsive**: Mobile-first, tested across breakpoints (360px → 1200px+)
+- **Accessibility**: Skip link, aria-labels, `prefers-reduced-motion` support
 
 ---
 
-## 📂 Project Structure
-```text
-portfolio/
-├── index.html              # Main HTML containing all sections: hero, about, skills, projects, contact, footer
-├── CV_ENG.pdf              # PDF version of CV for download
-├── img/                    # Images used throughout the website
-│   ├── profile.jpeg        # Profile picture in About section
-│   └── favicon.ico         # Browser tab favicon
-├── CSS/                    # Stylesheets for different sections
-│   ├── base.css            # Base styles: typography, variables, general elements
-│   ├── header.css          # Header section styles: logo, navigation, sticky behavior
-│   ├── hero.css            # Hero section styles: intro and CTA button
-│   ├── about.css           # About section layout and profile image styling
-│   ├── skills.css          # Skills section grid, icons, and labels
-│   ├── certifications.css  # Certifications section card styles
-│   ├── projects.css        # Projects cards, filter buttons, hover effects
-│   ├── contact.css         # Contact form layout, inputs, buttons, validation
-│   ├── footer.css          # Footer layout, links, social media icons
-│   └── navigation.css      # Hamburger menu and mobile overlay styles
-└── js/                     # Modular JavaScript files
-    ├── headerScroll.js       # Adds/removes 'scrolled' class on header on scroll
-    ├── scrollToTop.js        # Controls scroll-to-top button visibility & smooth scroll
-    ├── mobileMenu.js         # Hamburger menu toggle, overlay click, mobile nav behavior
-    ├── projectFilters.js     # Filters project cards by category (PHP, JS, Database)
-    ├── smoothScroll.js       # Smooth scrolling for anchor links
-    ├── formValidation.js     # Real-time validation for contact form fields
-    └── emailJS.js            # EmailJS integration for notifications and auto-replies
+## Adding a New Project
+Edit `data/projects.json` and add an entry — no HTML or JS changes needed:
+
+```json
+{
+  "id": "unique-id",
+  "title": "Project Title",
+  "icon": "🎯",
+  "featured": false,
+  "badges": [],
+  "tags": ["HTML", "CSS", "JavaScript"],
+  "description": "Short description of what this does.",
+  "category": "web",
+  "demo": "https://...",
+  "github": "https://github.com/GeorgeVento/..."
+}
+```
+
+Fields `demo` and `github` are optional — omit either if not available.  
+For a new filter category, add a `<button class="filter-btn" data-filter="category">` in `index.html`.
+
+---
+
+## Project Structure
+```
+my_portfolio/
+├── index.html              # Main page (all sections)
+├── success.html            # Contact form success page
+├── CV_ENG.pdf              # Downloadable CV
+├── data/
+│   └── projects.json       # Project data — edit this to add/update projects
+├── img/
+│   ├── profile.jpeg
+│   └── favicon.ico
+├── CSS/
+│   ├── base.css            # CSS variables, typography, animations, utilities
+│   ├── header.css          # Sticky header, nav, hamburger menu
+│   ├── hero.css            # Hero section, typing animation, orb effects
+│   ├── about.css           # About layout, profile image, pills
+│   ├── skills.css          # Skills grid, icon colors
+│   ├── projects.css        # Project cards, filter buttons, skeleton loader
+│   ├── contact.css         # Contact form, validation states
+│   ├── footer.css          # Footer layout, socials
+│   └── navigation.css      # Scroll-to-top, skip link, reduced-motion
+└── js/
+    ├── loadProjects.js     # Fetches projects.json and renders cards dynamically
+    ├── projectFilters.js   # Filter buttons logic (All / Web / App)
+    ├── headerScroll.js     # Scrolled class on header
+    ├── scrollToTop.js      # Scroll-to-top button
+    ├── mobileMenu.js       # Hamburger menu, overlay, keyboard close
+    ├── smoothScroll.js     # Smooth anchor scrolling
+    ├── formValidation.js   # Real-time input validation
+    └── emailJS.js          # EmailJS send + auto-reply
+```
