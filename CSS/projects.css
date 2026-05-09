@@ -50,6 +50,16 @@ PROJECTS.CSS - DARK CARDS WITH GLOW
     gap: 1.75rem;
 }
 
+/* Featured card always spans full row */
+.project-card.featured {
+    grid-column: 1 / -1;
+}
+
+/* Last non-featured card spans full row when alone in its row */
+.project-grid > .project-card:not(.featured):last-child:nth-child(even) {
+    grid-column: 1 / -1;
+}
+
 
 /* ── Base Card ── */
 .project-card {
