@@ -348,17 +348,15 @@
         import { initEmailJS }        from './js/emailJS.js';
         import { loadProjects }       from './js/loadProjects.js';
 
-        document.addEventListener('DOMContentLoaded', async () => {
-            initHeaderScroll();
-            initScrollToTop();
-            initMobileMenu();
-            initSmoothScroll();
-            initFormValidation();
-            initEmailJS();
+        initHeaderScroll();
+        initScrollToTop();
+        initMobileMenu();
+        initSmoothScroll();
+        initFormValidation();
+        initEmailJS();
 
-            await loadProjects();
-            initProjectFilters();
-        });
+        await loadProjects();
+        initProjectFilters();
     </script>
 
 </body>
