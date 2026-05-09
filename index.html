@@ -82,13 +82,17 @@
                 </p>
 
                 <p class="tagline">
-                    Final-year CS student at SAEK Aigaleo, looking for my first junior role. I build real projects, learn fast, and take my work seriously.
+                    Final-year Open Software Systems student at SAEK Aigaleo, looking for my first junior role. I build real projects, learn fast, and take my work seriously.
                 </p>
 
                 <div class="hero-cta-group">
                     <a href="#projects" class="cta-button">
                         <i class="fas fa-folder-open"></i>
                         View My Projects
+                    </a>
+                    <a href="CV_ENG.pdf" download="Ventouratos-Georgios.Leonidas-CV.pdf" class="cta-button-outline">
+                        <i class="fas fa-download"></i>
+                        Download CV
                     </a>
                 </div>
             </div>
@@ -113,10 +117,10 @@
 
                     <div class="about-text reveal reveal-delay-1">
                         <p>
-                            I'm a <b>final-year Computer Science student</b> at SAEK Aigaleo, focusing on web development and databases. I've built several projects from scratch using HTML, CSS, JavaScript, PHP, Python, and MySQL — most of them are live and you can try them here.
+                            I'm a <b>final-year Open Software Systems student</b> at SAEK Aigaleo, focusing on web development and databases. I've built several projects from scratch using HTML, CSS, JavaScript, PHP, Python, and MySQL — most of them are live and you can try them here.
                         </p>
                         <p>
-                            I'm looking for a <b>junior position</b> where I can contribute from day one and grow alongside an experienced team. I learn quickly, I'm comfortable asking questions, and I genuinely enjoy building things.
+                            I'm looking for a <b>junior developer role</b> where I can work on real things from day one and learn from more experienced people around me. I pick up new tools quickly, I'm not afraid to ask questions, and I care about getting things right.
                         </p>
 
                         <div class="about-info-pills">
@@ -195,13 +199,6 @@
             <div class="container">
                 <h2 class="reveal">My Projects</h2>
 
-                <!-- Filter Buttons -->
-                <div class="filter-container reveal">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="app">Apps</button>
-                </div>
-
                 <div class="project-grid">
 
                     <!-- EcoCity Tracker — Featured / Founder -->
@@ -222,8 +219,9 @@
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JWT</span>
                             <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Git</span>
                         </div>
-                        <p>As <strong>founder and project leader</strong>, I developed a civic technology platform that enables citizens to report environmental issues across municipalities in Attica. Features include GPS-based reporting with photo uploads, per-municipality admin dashboards, statistics visualised with Chart.js, and Excel export functionality.</p>
+                        <p>I <strong>founded this project and led the development</strong> alongside two teammates. Residents can report environmental issues in their area, attach photos, and follow what gets fixed. Each municipality has its own admin dashboard with statistics via Chart.js and an option to export reports to Excel.</p>
                         <div class="project-links">
                             <a href="https://georgevento.github.io/EcoCity-Tracker/" target="_blank" class="project-link project-link-demo">
                                 <i class="fas fa-external-link-alt"></i>
@@ -247,8 +245,10 @@
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">Bootstrap</span>
                             <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Git</span>
                         </div>
-                        <p>A comprehensive website for a fictional animal rescue organisation, featuring adoption listings, event management, donation forms, and an admin dashboard for managing animals and reports.</p>
+                        <p>Website for a fictional animal shelter — adoption listings, event pages, and donation forms. Includes a PHP-powered admin panel to manage animals, users, and reports.</p>
                         <div class="project-links">
                             <a href="https://georgevento.github.io/charity-website/" target="_blank" class="project-link project-link-demo">
                                 <i class="fas fa-external-link-alt"></i>
@@ -258,30 +258,6 @@
                                 <i class="fab fa-github"></i>
                                 GitHub
                             </a>
-                        </div>
-                    </div>
-
-                    <!-- Weather Dashboard — React (Coming Soon) -->
-                    <div class="project-card" data-category="app">
-                        <div class="card-header">
-                            <span class="card-icon">🌤️</span>
-                            <div class="card-badges">
-                                <span class="badge badge-soon"><i class="fas fa-hammer"></i> In Progress</span>
-                            </div>
-                        </div>
-                        <h3>Weather Dashboard &mdash; React App</h3>
-                        <div class="tech-tags-container">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">REST API</span>
-                        </div>
-                        <p>A weather forecast app built with React hooks, fetching live data from a public weather API. Displays current conditions and a multi-day forecast for any searched city.</p>
-                        <div class="project-links">
-                            <span class="project-link-soon">
-                                <i class="fas fa-code"></i>
-                                Coming Soon
-                            </span>
                         </div>
                     </div>
 
@@ -296,8 +272,9 @@
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Git</span>
                         </div>
-                        <p>A multi-step web application for hotel room bookings, including customer details, room selection, booking summary, and an admin panel for viewing all reservations stored in a MySQL database.</p>
+                        <p>A step-by-step booking app — guests fill in their details, pick a room, and get a confirmation summary. The admin panel shows all reservations pulled from a MySQL database.</p>
                         <div class="project-links">
                             <a href="https://github.com/GeorgeVento/Room-Reservation-App" target="_blank" class="project-link project-link-github">
                                 <i class="fab fa-github"></i>
@@ -391,7 +368,7 @@
     <!-- Typing Animation -->
     <script>
         (function () {
-            const words = ['Junior Developer', 'Web Developer', 'CS Student', 'Fast Learner'];
+            const words = ['Web Developer', 'JavaScript Developer', 'Junior Developer'];
             const el = document.getElementById('typing-target');
             let wi = 0, ci = 0, deleting = false;
 
