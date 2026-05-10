@@ -96,6 +96,48 @@ SKILLS.CSS - DARK MODE
 
 .skill-item:hover span { color: var(--text-primary); }
 
+/* Category label */
+.skills-category-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin: 0 auto 1.5rem;
+    max-width: 900px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills-category-label::before,
+.skills-category-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-light);
+}
+
+.skills-grid + .skills-category-label {
+    margin-top: 2.5rem;
+}
+
+/* Knowledge tier — subtler appearance */
+.skill-item--knowledge {
+    opacity: 0.75;
+    border-style: dashed;
+}
+
+.skill-item--knowledge:hover {
+    opacity: 1;
+}
+
+.skill-item--knowledge:nth-child(1):hover i { color: #f89820; }  /* Java */
+.skill-item--knowledge:nth-child(2):hover i { color: #61dafb; }  /* React */
+.skill-item--knowledge:nth-child(3):hover i { color: #a8b9cc; }  /* C/C++ */
+
 /* ── Responsive ─── */
 @media (max-width: 600px) {
     .skills-grid { gap: 0.875rem; }
