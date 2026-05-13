@@ -1,8 +1,6 @@
 /*
 ============================================================
-NAVIGATION.CSS - MODERNIZED
-------------------------------------------------------------
-Scroll to top button and utility styles
+NAVIGATION.CSS
 ============================================================
 */
 
@@ -11,13 +9,13 @@ Scroll to top button and utility styles
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    width: 46px;
-    height: 46px;
+    width: 44px;
+    height: 44px;
     background: var(--primary);
     color: #080d1a;
     border: none;
     border-radius: 50%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,7 +23,7 @@ Scroll to top button and utility styles
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, bottom 0.3s ease;
     box-shadow: var(--glow-green);
     z-index: 900;
 }
@@ -36,55 +34,16 @@ Scroll to top button and utility styles
     transform: translateY(0);
 }
 
+.scroll-to-top.above-footer {
+    bottom: calc(2rem + 52px);
+}
+
 .scroll-to-top:hover {
     background: var(--primary-light);
-    transform: translateY(-3px);
-    box-shadow: 0 0 40px rgba(74, 222, 128, 0.4);
+    transform: translateY(-2px);
 }
 
-.scroll-to-top:active {
-    transform: translateY(-1px);
-}
-
-/* Loading state for buttons */
-.btn-loader {
-    display: none;
-}
-
-.btn-loader.hidden {
-    display: none !important;
-}
-
-.btn-text.hidden {
-    display: none;
-}
-
-/* Animation utilities */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.animate-in {
-    animation: fadeInUp 0.6s ease-out;
-}
+.scroll-to-top:active { transform: translateY(0); }
 
 /* Accessibility */
 .skip-link {
@@ -99,28 +58,27 @@ Scroll to top button and utility styles
     border-radius: 0 0 8px 0;
 }
 
-.skip-link:focus {
-    top: 0;
+.skip-link:focus { top: 0; }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        width: 42px;
+        height: 42px;
+    }
+
+    .scroll-to-top.above-footer {
+        bottom: calc(1.25rem + 52px);
+    }
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-    }
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .scroll-to-top {
-        bottom: 1.5rem;
-        right: 1.5rem;
-        width: 45px;
-        height: 45px;
-        font-size: 1.125rem;
     }
 }

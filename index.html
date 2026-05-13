@@ -18,14 +18,12 @@
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/hero.css">
     <link rel="stylesheet" href="CSS/about.css">
-    <link rel="stylesheet" href="CSS/skills.css">
     <link rel="stylesheet" href="CSS/projects.css">
     <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/navigation.css">
 
     <!-- External Resources -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +55,6 @@
             <nav id="nav-menu">
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -78,10 +75,6 @@
                 </div>
                 <h1>Hi, I'm George&nbsp;👋</h1>
 
-                <p class="hero-typing-line">
-                    I'm a <span class="typing-word" id="typing-target"></span><span class="typing-cursor"></span>
-                </p>
-
                 <p class="tagline">
                     Final-year Open Software Systems student at SAEK Aigaleo, looking for my first junior role. I build real projects, learn fast, and take my work seriously.
                 </p>
@@ -91,17 +84,9 @@
                         <i class="fas fa-folder-open"></i>
                         View My Projects
                     </a>
-                    <a href="CV_ENG.pdf" download="Ventouratos-Georgios.Leonidas-CV.pdf" class="cta-button-outline">
-                        <i class="fas fa-download"></i>
-                        Download CV
-                    </a>
                 </div>
             </div>
 
-            <div class="scroll-indicator">
-                <div class="scroll-mouse"></div>
-                <span>Scroll</span>
-            </div>
         </section>
 
         <!-- About Section -->
@@ -130,79 +115,19 @@
                             <span class="info-pill"><i class="fas fa-code"></i> Junior Developer</span>
                         </div>
 
-                        <div class="cv-download">
-                            <a href="CV_ENG.pdf" download="Ventouratos-Georgios.Leonidas-CV.pdf" class="download-btn">
-                                <i class="fas fa-download"></i>
-                                Download CV
-                            </a>
-                            <div class="about-socials">
-                                <a href="https://github.com/GeorgeVento" target="_blank" class="about-social-link" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/george-leonidas-ventouratos-660709217/" target="_blank" class="about-social-link" aria-label="LinkedIn">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="mailto:ventouratos.george@gmail.com" class="about-social-link" aria-label="Email">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
+                        <div class="skill-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Git</span>
+                            <span class="skill-tag--knowledge">Java</span>
+                            <span class="skill-tag--knowledge">React</span>
+                            <span class="skill-tag--knowledge">C &amp; C++</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section skills-section">
-            <div class="container">
-                <h2 class="reveal">Tech Stack</h2>
-                <p class="skills-subtitle reveal">Technologies I've worked with across my projects.</p>
-
-                <div class="skills-category-label reveal">Core Technologies</div>
-                <div class="skills-grid">
-                    <div class="skill-item reveal reveal-delay-1">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML5</span>
-                    </div>
-                    <div class="skill-item reveal reveal-delay-2">
-                        <i class="fab fa-css3-alt"></i>
-                        <span>CSS3</span>
-                    </div>
-                    <div class="skill-item reveal reveal-delay-3">
-                        <i class="fab fa-js-square"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-item reveal reveal-delay-1">
-                        <i class="fab fa-python"></i>
-                        <span>Python</span>
-                    </div>
-                    <div class="skill-item reveal reveal-delay-2">
-                        <i class="fas fa-database"></i>
-                        <span>SQL</span>
-                    </div>
-                    <div class="skill-item reveal reveal-delay-3">
-                        <i class="fab fa-php"></i>
-                        <span>PHP</span>
-                    </div>
-                    <div class="skill-item reveal reveal-delay-4">
-                        <i class="fab fa-git-alt"></i>
-                        <span>Git</span>
-                    </div>
-                </div>
-
-                <div class="skills-category-label reveal">Knowledge</div>
-                <div class="skills-grid">
-                    <div class="skill-item skill-item--knowledge reveal reveal-delay-1">
-                        <i class="fab fa-java"></i>
-                        <span>Java</span>
-                    </div>
-                    <div class="skill-item skill-item--knowledge reveal reveal-delay-2">
-                        <i class="fab fa-react"></i>
-                        <span>React</span>
-                    </div>
-                    <div class="skill-item skill-item--knowledge reveal reveal-delay-3">
-                        <i class="fas fa-code"></i>
-                        <span>C &amp; C++</span>
                     </div>
                 </div>
             </div>
@@ -228,38 +153,22 @@
             <div class="container">
                 <div class="contact-header reveal">
                     <h2>Get In Touch</h2>
-                    <p>Looking for a junior developer? Have a role or a project in mind? Send me a message — I'll get back to you quickly.</p>
+                    <p>I'm actively looking for my first junior developer role, in Athens or remotely. Whether you have an opening or just want to connect — feel free to reach out. I reply quickly.</p>
                 </div>
 
-                <div class="contact-wrapper reveal reveal-delay-1">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Your message..." required></textarea>
-                        </div>
-
-                        <button type="submit" id="submit-btn" class="submit-button">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-loader hidden">Sending...</span>
-                        </button>
-
-                        <div id="form-message" class="form-message hidden"></div>
-                    </form>
+                <div class="contact-links reveal reveal-delay-1">
+                    <a href="mailto:g.l.ventouratos@gmail.com" class="contact-link-item">
+                        <i class="fas fa-envelope"></i>
+                        g.l.ventouratos@gmail.com
+                    </a>
+                    <a href="https://github.com/GeorgeVento" target="_blank" class="contact-link-item">
+                        <i class="fab fa-github"></i>
+                        github.com/GeorgeVento
+                    </a>
+                    <a href="https://www.linkedin.com/in/george-leonidas-ventouratos-660709217/" target="_blank" class="contact-link-item">
+                        <i class="fab fa-linkedin-in"></i>
+                        LinkedIn
+                    </a>
                 </div>
             </div>
         </section>
@@ -268,72 +177,13 @@
 
     <!-- Footer -->
     <footer class="modern-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>George-Leonidas Ventouratos</h4>
-                    <p>Open Software Systems student at SAEK Aigaleo, looking for a junior developer role. Open to opportunities in Athens and remotely.</p>
-                </div>
-
-                <div class="footer-section footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section footer-socials">
-                    <h4>Connect</h4>
-                    <ul class="socials">
-                        <li><a href="https://github.com/GeorgeVento" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/george-leonidas-ventouratos-660709217/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="mailto:ventouratos.george@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="container">
-                    <p class="legal">&copy; 2026 George-Leonidas Ventouratos. All rights reserved.</p>
-                    <p class="legal-secondary">Made with <i class="fa-solid fa-heart"></i> and code</p>
-                </div>
-            </div>
+        <div class="footer-bottom">
+            <p class="legal">&copy; 2026 George-Leonidas Ventouratos. All rights reserved.</p>
+            <p class="legal-secondary">Made with <i class="fa-solid fa-heart"></i> and code</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-
-    <!-- Typing Animation -->
-    <script>
-        (function () {
-            const words = ['Web Developer', 'JavaScript Developer', 'Junior Developer'];
-            const el = document.getElementById('typing-target');
-            let wi = 0, ci = 0, deleting = false;
-
-            function tick() {
-                const word = words[wi];
-                el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
-
-                let delay = deleting ? 60 : 100;
-
-                if (!deleting && ci > word.length) {
-                    deleting = true;
-                    delay = 1600;
-                } else if (deleting && ci < 0) {
-                    deleting = false;
-                    ci = 0;
-                    wi = (wi + 1) % words.length;
-                    delay = 400;
-                }
-                setTimeout(tick, delay);
-            }
-
-            tick();
-        })();
-    </script>
 
     <!-- Scroll Reveal -->
     <script>
@@ -362,17 +212,12 @@
         import { initMobileMenu }     from './js/mobileMenu.js';
         import { initProjectFilters } from './js/projectFilters.js';
         import { initSmoothScroll }   from './js/smoothScroll.js';
-        import { initFormValidation } from './js/formValidation.js';
-        import { initEmailJS }        from './js/emailJS.js';
         import { loadProjects }       from './js/loadProjects.js';
 
         initHeaderScroll();
         initScrollToTop();
         initMobileMenu();
         initSmoothScroll();
-        initFormValidation();
-        initEmailJS();
-
         await loadProjects();
         initProjectFilters();
     </script>

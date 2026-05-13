@@ -4,29 +4,24 @@ BASE.CSS - DARK THEME
 ============================================================
 */
 :root {
-    /* Dark Background Colors */
     --bg-primary:    #080d1a;
     --bg-secondary:  #0c1120;
     --bg-card:       #101828;
     --bg-card-hover: #141f30;
 
-    /* Brand / Accent */
     --primary:       #4ade80;
     --primary-light: #86efac;
     --primary-dark:  #22c55e;
     --accent:        #22d3ee;
     --accent-purple: #a78bfa;
 
-    /* Text */
     --text-primary:   #f1f5f9;
     --text-secondary: #94a3b8;
     --text-tertiary:  #475569;
 
-    /* Borders */
     --border-light:  rgba(255, 255, 255, 0.07);
     --border-medium: rgba(255, 255, 255, 0.13);
 
-    /* Shadows / Glows */
     --shadow-sm:  0 1px 4px rgba(0,0,0,0.5);
     --shadow-md:  0 4px 16px rgba(0,0,0,0.6);
     --shadow-lg:  0 10px 40px rgba(0,0,0,0.7);
@@ -34,7 +29,6 @@ BASE.CSS - DARK THEME
     --glow-green: 0 0 30px rgba(74,222,128,0.25);
     --glow-cyan:  0 0 30px rgba(34,211,238,0.20);
 
-    /* Spacing */
     --section-padding: 90px;
     --container-padding: 24px;
 }
@@ -61,7 +55,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle dark noise texture overlay */
 body::before {
     content: '';
     position: fixed;
@@ -88,12 +81,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary);
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.02em; }
-h2 { font-size: clamp(1.875rem, 3.5vw, 2.75rem); letter-spacing: -0.01em; margin-bottom: 1rem; }
-h3 { font-size: clamp(1.25rem, 2.5vw, 1.625rem); }
+h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem);  letter-spacing: -0.01em; margin-bottom: 1rem; }
+h3 { font-size: clamp(1.15rem, 2.5vw, 1.5rem); }
 
 p {
-    font-size: 1.0625rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: var(--text-secondary);
 }
@@ -106,7 +99,7 @@ p {
 
 .section h2 {
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
     position: relative;
     display: block;
 }
@@ -114,10 +107,10 @@ p {
 .section h2::after {
     content: '';
     position: absolute;
-    bottom: -14px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
+    width: 44px;
     height: 3px;
     background: linear-gradient(90deg, var(--primary), var(--accent));
     border-radius: 2px;
@@ -126,7 +119,7 @@ p {
 a {
     text-decoration: none;
     color: var(--primary);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 0.25s ease;
 }
 
 a:hover { color: var(--primary-light); }
@@ -136,14 +129,14 @@ button, .btn {
     border: none;
     font-family: inherit;
     font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.25s ease;
 }
 
-/* Scroll Reveal Utility */
+/* Scroll Reveal */
 .reveal {
     opacity: 0;
-    transform: translateY(32px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .reveal.visible {
@@ -151,10 +144,10 @@ button, .btn {
     transform: translateY(0);
 }
 
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
 
 /* Skip link */
 .skip-link {
@@ -171,10 +164,9 @@ button, .btn {
 
 .skip-link:focus { top: 1rem; }
 
-
 /* Animations */
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
+    from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -183,36 +175,36 @@ button, .btn {
     to   { opacity: 1; }
 }
 
-@keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4); }
-    50%       { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+/* ── Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+    :root { --section-padding: 72px; }
 }
 
-/* ── Responsive ─────────────────────────────────── */
+/* ── Mobile (≤ 768px) ── */
 @media (max-width: 768px) {
     :root {
-        --section-padding: 60px;
+        --section-padding: 56px;
         --container-padding: 20px;
     }
 
-    .container { padding: 0 var(--container-padding); }
+    .section h2 { margin-bottom: 2.25rem; }
 
-    /* Prevent tiny text on mobile */
-    h1 { font-size: clamp(1.9rem, 8vw, 2.4rem) !important; }
-    h2 { font-size: clamp(1.5rem, 6vw, 1.9rem) !important; }
-
-    /* Larger tap targets for links/buttons */
-    a.cta-button,
-    a.cta-button-outline,
-    a.download-btn,
-    button.submit-button,
-    button.filter-btn {
-        min-height: 48px;
-    }
-
-    /* Reduce reveal stagger on mobile for snappier feel */
     .reveal-delay-1 { transition-delay: 0.05s; }
-    .reveal-delay-2 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.10s; }
     .reveal-delay-3 { transition-delay: 0.15s; }
-    .reveal-delay-4 { transition-delay: 0.2s; }
+    .reveal-delay-4 { transition-delay: 0.20s; }
+}
+
+/* ── Small mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+    :root { --container-padding: 16px; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

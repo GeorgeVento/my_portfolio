@@ -20,7 +20,6 @@
     "tags": ["HTML", "CSS", "Bootstrap", "PHP", "MySQL", "Git"],
     "description": "Website for a fictional animal shelter — adoption listings, event pages, and donation forms. Includes a PHP-powered admin panel to manage animals, users, and reports.",
     "category": "web",
-    "demo": "https://georgevento.github.io/charity-website/",
     "github": "https://github.com/GeorgeVento/charity-website"
   },
   {

@@ -1,6 +1,6 @@
 /*
 ============================================================
-HERO.CSS - DARK ANIMATED HERO
+HERO.CSS
 ============================================================
 */
 
@@ -13,7 +13,7 @@ HERO.CSS - DARK ANIMATED HERO
     background: var(--bg-primary);
 }
 
-/* Animated gradient orbs */
+/* Static gradient orbs */
 .hero-section::before,
 .hero-section::after {
     content: '';
@@ -26,32 +26,24 @@ HERO.CSS - DARK ANIMATED HERO
 .hero-section::before {
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(74, 222, 128, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(74, 222, 128, 0.09) 0%, transparent 70%);
     top: -200px;
     right: -200px;
-    animation: float-orb 8s ease-in-out infinite alternate;
 }
 
 .hero-section::after {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(34, 211, 238, 0.10) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.07) 0%, transparent 70%);
     bottom: -150px;
     left: -100px;
-    animation: float-orb 11s ease-in-out infinite alternate-reverse;
-}
-
-@keyframes float-orb {
-    from { transform: translate(0, 0) scale(1); }
-    to   { transform: translate(40px, 30px) scale(1.05); }
 }
 
 /* Grid dot pattern */
-.hero-section .hero-grid {
+.hero-grid {
     position: absolute;
     inset: 0;
-    background-image:
-        radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
 }
@@ -61,6 +53,7 @@ HERO.CSS - DARK ANIMATED HERO
     z-index: 2;
     text-align: center;
     padding-top: 80px;
+    padding-bottom: 60px;
 }
 
 /* Available badge */
@@ -85,7 +78,6 @@ HERO.CSS - DARK ANIMATED HERO
     height: 8px;
     background: var(--primary);
     border-radius: 50%;
-    animation: pulse-glow 2s ease-in-out infinite;
 }
 
 /* Hero Heading */
@@ -99,46 +91,17 @@ HERO.CSS - DARK ANIMATED HERO
     line-height: 1.15;
 }
 
-/* Typing line */
-.hero-typing-line {
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    animation: fadeInUp 0.7s ease-out 0.2s both;
-    min-height: 2rem;
-}
-
-.hero-typing-line .typing-word {
-    color: var(--accent);
-    font-weight: 600;
-}
-
-.typing-cursor {
-    display: inline-block;
-    width: 2px;
-    height: 1.2em;
-    background: var(--accent);
-    margin-left: 2px;
-    vertical-align: middle;
-    animation: blink 0.75s step-end infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0; }
-}
-
 /* Tagline */
 .tagline {
-    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
     color: var(--text-secondary);
-    max-width: 620px;
+    max-width: 600px;
     margin: 0 auto 2.5rem;
     line-height: 1.7;
     animation: fadeInUp 0.7s ease-out 0.3s both;
 }
 
-/* CTA Buttons */
+/* CTA */
 .hero-cta-group {
     display: flex;
     gap: 1rem;
@@ -164,130 +127,52 @@ HERO.CSS - DARK ANIMATED HERO
 
 .cta-button:hover {
     background: var(--primary-light);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 0 40px rgba(74, 222, 128, 0.4);
     color: #080d1a;
 }
 
-.cta-button:active { transform: translateY(-1px); }
-
-.cta-button-outline {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.625rem;
-    padding: 0.9rem 2rem;
-    background: transparent;
-    color: var(--text-primary);
-    font-size: 0.9375rem;
-    font-weight: 600;
-    border-radius: 10px;
-    border: 1.5px solid var(--border-medium);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* ── Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+    .hero-section::before { width: 500px; height: 500px; }
+    .hero-section::after  { width: 350px; height: 350px; }
 }
 
-.cta-button-outline:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-    transform: translateY(-3px);
-    background: rgba(74, 222, 128, 0.06);
-}
-
-/* Scroll indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-tertiary);
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
-    animation: fadeIn 1s ease-out 1s both;
-    z-index: 2;
-}
-
-.scroll-indicator .scroll-mouse {
-    width: 22px;
-    height: 34px;
-    border: 2px solid var(--text-tertiary);
-    border-radius: 12px;
-    position: relative;
-}
-
-.scroll-indicator .scroll-mouse::before {
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    height: 6px;
-    background: var(--text-tertiary);
-    border-radius: 2px;
-    animation: scroll-wheel 1.5s ease infinite;
-}
-
-@keyframes scroll-wheel {
-    0%   { opacity: 1; top: 6px; }
-    100% { opacity: 0; top: 18px; }
-}
-
-/* ── Responsive ─── */
+/* ── Mobile (≤ 768px) ── */
 @media (max-width: 768px) {
     .hero-section {
-        min-height: 100svh;
-        min-height: 100vh; /* fallback */
+        min-height: auto;
     }
 
     .hero-section .container {
-        padding-top: 90px;   /* clear sticky header */
+        padding-top: 110px;
         padding-bottom: 80px;
-        padding-left: 20px;
-        padding-right: 20px;
     }
 
-    .hero-section h1 {
-        margin-bottom: 1rem;
-    }
-
-    .hero-typing-line {
-        font-size: 1.05rem;
-        margin-bottom: 1.25rem;
-    }
+    .hero-typing-line { font-size: 1rem; }
 
     .tagline {
         font-size: 0.9625rem;
-        margin-bottom: 2rem;
-        padding: 0 0.5rem;
+        padding: 0 0.25rem;
     }
 
     .hero-cta-group {
         flex-direction: column;
         align-items: center;
-        gap: 0.875rem;
     }
 
-    .cta-button,
-    .cta-button-outline {
+    .cta-button {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         justify-content: center;
         padding: 1rem 1.5rem;
-        font-size: 0.9375rem;
     }
 
-    .scroll-indicator { display: none; }
+    .hero-section::before { width: 300px; height: 300px; }
+    .hero-section::after  { width: 220px; height: 220px; }
+}
 
-    /* Smaller orbs on mobile */
-    .hero-section::before {
-        width: 300px;
-        height: 300px;
-    }
-    .hero-section::after {
-        width: 220px;
-        height: 220px;
-    }
+/* ── Small mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+    .available-badge { font-size: 0.75rem; }
 }
